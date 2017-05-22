@@ -1,0 +1,247 @@
+@charset="utf-8";
+/*统一样式-------清除默认*/
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea,th,td{
+    padding:0px;margin: 0px;
+}
+body{font:14px/1.4286 "Microsoft Yahei";background: #eee;}
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0;table-layout: fixed;
+}
+img{border:none;}
+.clearfix{
+    zoom:1;
+}
+.clearfix:after{
+    display: table;
+    clear:both;
+    content:"";
+}
+button{
+    outline: none;
+    border: none;
+}
+/*进度条*/
+.progressBar{
+    width: 600px;height: 30px;
+    border-radius:30px;background: rgba(255,255,255,.7);
+    margin: 420px auto 0;border:3px groove #333;overflow: hidden;
+}
+.progressBar div{
+    background:green;
+    height: 100%;width: 0%;
+}
+/*统一样式-------页面同一元素*/
+
+section,article{
+	width: 800px;height: 520px;
+	overflow: hidden;position: relative;
+}
+article{margin:50px auto;}
+.WindowInfo{
+    position: absolute;
+    top: 0px;left: 0px;bottom:0px;right: 0px;
+    margin: auto;
+}
+/*注册界面*/
+#loginScene table{
+    margin: 150px 20px;
+    table-layout: fixed;
+    font-size: 25px;color: #fff;
+    width: 500px;height: 350px;
+}
+#loginScene table tr td:nth-child(1){
+    width: 200px;
+    text-align: center;
+}
+#loginScene input{
+    width: 200px;height: 30px;
+    border-radius:5px;background: none;
+}
+#loginScene .error{
+    font-size: 12px;
+}
+/*菜单界面*/
+#menuScene button{
+    display: block;
+    margin: 20px 50px;
+}
+#menuScene .WindowInfo{
+    left: 300px;
+}
+/*商店*/
+    /*用户信息展示区*/
+#shopScene #shopUserLayer{
+    width: 240px;height: 350px;
+    margin: 10px;margin-top:40px;
+    position: relative;
+}
+#shopScene #shopUserLayer .userFigure{
+    position: absolute;
+    top: 110px;left: 50px;
+}
+#shopScene #shopUserLayer .userName{
+    width: 100%;
+    height: 30px;line-height: 30px;
+    text-align: center;
+}
+#shopScene #shopUserLayer .usergold{
+    width: 120px;height: 30px;
+    position: absolute;left: 110px;
+    bottom:0px;
+}
+#shopScene #shopUserLayer .displayBg{
+    width: 221px;height: 257px;
+    position: absolute;
+    top: 32px;left: 10px;
+    z-index: 0;overflow: hidden;
+}
+#shopScene #shopUserLayer .displayBg img{
+    height: 100%;position: absolute;
+    animation:displayAnm 8s linear infinite;
+}
+
+    /*三个主界面按钮*/
+#shopScene>button {
+    position: absolute;
+}
+#shopScene>.carPortBtn{left: 70px;bottom: 86px;}
+#shopScene>.rechargeBtn{left: 70px;bottom: 44px;}
+#shopScene>.backBtn{right: 0px;bottom: 10px;}
+    /*商品展示层*/
+#shopScene #shopGoodsLayer{
+    position: absolute;
+    width: 526px;height: 472px;
+    right: 14px;top: 9px;
+}
+#shopScene #shopGoodsShow{
+    position: absolute;
+    width: 417px;height: 382px;
+    top: 40px;left: 88px;
+}
+#shopScene #shopGoodsShow .goods-one{
+    float: left;width: 127px;margin-left: 9px;
+    margin-top: 12px;text-align: center;position: relative;
+    overflow:hidden;
+    /*margin-bottom: 30px;*/
+}
+#shopScene #shopGoodsShow .goods-one:nth-child(3n+1) button{
+    margin-left: 4px;margin-right: -2px;
+}
+#shopScene #shopGoodsShow .goods-one button{margin: 0px 1px}
+#shopScene #shopGoodsShow .display-img{
+    position: relative;
+    margin-top: 28px;height: 98px;padding-left: 7px;padding-right: 6px;
+}
+#shopScene #shopGoodsShow .display-img img{width: 100%;height: 100%}
+ #shopScene #shopGoodsShow .display-img .infoImg{
+    position: absolute;display: none;width: 70px;height: 50px;
+} 
+#shopScene #shopGoodsShow .price{margin-top: 1px;}
+#shopScene #shopGoodsPagesBox{
+    position: absolute;
+    left: 260px;top: 430px;
+}
+    /*滚动条marquee*/
+#shopScene marquee{
+    position: absolute;
+    bottom: 0px;font-size: 20px;line-height: 34px;
+    color: #333;font-weight: bold;
+}
+/*车库场景*/
+#garageScene>.backBtn{position: absolute;right: 20px;bottom: 20px;}
+#garageScene>.saveBtn{position: absolute;right: 160px;bottom: 20px;}
+#garageScene .userFigure{position: absolute;top: 120px;left: 100px;}
+#garageScene .EquipmentInfo{
+    position: absolute;
+    width: 400px;height: 300px;
+    top: 280px;left: 100px;
+    font-size: 30px;color: #fff;letter-spacing: 5px;
+}
+    /*用户选择菜单*/
+#garageScene .EquipmentChoose{
+    position: absolute;
+    right: 85px;
+    top: 100px;
+}
+#garageScene .EquipmentChoose .chooseModule>*{
+    margin: 10px;vertical-align: middle;}
+/*游戏选择场景*/
+#gameChoiceScene .shadow{
+    width: 100%;position: absolute;height: 190px;
+    top: 0px;left: 0px;
+    background: url(../images/Bg/checkpointbg_2.png)top center no-repeat;
+    background-size: 100% 100%;
+}
+#gameChoiceScene .backBtn{
+    position: absolute;left: 60px;top: 350px;
+}
+#gameChoiceScene .continueBtn{
+    position: absolute;right: 60px;top: 378px;
+}
+#gameChoiceScene #gameChoiceLayer{
+    background: #333;
+    position: absolute;cursor: pointer;
+    width: 435px;height: 250px;
+    left: 176px;top: 134px;
+    border: 10px solid transparent;
+    border-radius: 10px;overflow: hidden;
+    box-shadow: 1px 0px 2px #333;
+}
+#gameChoiceScene #gameChoiceLayer div{
+    width: 6000px;
+}
+#gameChoiceScene #gameChoiceLayer img{
+    width: 435px;height: 250px;
+}
+#gameChoiceScene #gameChoiceLayer:hover{
+    box-shadow: 2px 2px 5px #333;
+}
+#gameChoiceScene #gameChoiceLayer .cue{
+    position: absolute;
+    width: 96px;height: 96px;
+    background: url('../images/CheckPoint/checkblock.png')center center no-repeat;
+    z-index: 2;top:77px;
+}
+/*关卡选择界面*/
+#trackChoiceScene .backBtn{
+    position:absolute;
+    top: 412px;left: 40px;
+}
+#trackChoiceScene .continueBtn{
+    position:absolute;
+    top: 412px;right: 40px;
+}
+#trackChoiceScene #trackChoiceLayer>div:hover{
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #333;
+}
+
+/*游戏介绍*/
+#gameIntroduceScene #gameInfoLayer{
+    position: absolute;
+    left: 66px;
+    top: 25px;
+    background: rgba(255,255,255,.3);
+    width: 670px;
+    height: 475px;
+}
+#gameIntroduceScene .backBtn{
+    position:absolute;
+    top: 412px;left: 40px;
+}
+#gameIntroduceScene .continueBtn{
+    position:absolute;
+    top: 412px;right: 40px;
+}
+
+/*背景动画*/
+@keyframes displayAnm{
+    0%{left: 0px;}
+    100%{left: -1675px;}
+}
+/*轮子动画*/
+@keyframes carWheelAnm{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(720deg)}
+}
